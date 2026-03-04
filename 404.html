@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecting…</title>
+  <meta http-equiv="refresh" content="0; url=/" />
+  <script>
+    // GitHub Pages SPA fallback: redirect any 404 to the root while preserving the path
+    (function () {
+      var redirectUrl = "/";
+      var loc = window.location;
+      var fullPath = loc.pathname + loc.search + loc.hash;
+      // Store the original path so the app can read it if needed
+      sessionStorage.setItem("asfr-gallery-redirect-path", fullPath);
+      loc.replace(redirectUrl);
+    })();
+  </script>
+</head>
+
+<body>
+  Redirecting…
+</body>
+
+</html>
