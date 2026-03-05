@@ -4,6 +4,7 @@
   "private": true,
   "packageManager": "pnpm@10.30.3",
   "scripts": {
+    "prepare": "husky",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
@@ -14,23 +15,29 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.48.0",
+    "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.28.0",
-    "react": "^18.3.1"
+    "react-router-dom": "^6.28.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.0.0",
-    "@types/react-dom": "^18.3.3",
     "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.3",
     "@vitejs/plugin-react-swc": "^3.7.0",
+    "eslint": "^9.0.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.0",
-    "eslint": "^9.0.0",
     "globals": "^15.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.2",
     "prettier": "^3.0.0",
-    "typescript-eslint": "^8.0.0",
     "typescript": "^5.7.2",
+    "typescript-eslint": "^8.0.0",
     "vite": "^6.0.1"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "pnpm run lint:files",
+    "*.{ts,tsx,js,jsx,json,css,md,html,yml,yaml}": "pnpm run format:files"
   }
 }
