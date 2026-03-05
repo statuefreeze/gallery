@@ -6,6 +6,7 @@ The app focuses on syndicating metadata from sources like DeviantArt while selec
 ### Tech Stack
 
 The gallery is designed around the goal of being publicly deployable with zero cost.
+
 - single-page GitHub Pages app (React + TypeScript + Vite)
 - Supabase free tier backend (Auth + Postgres + Storage)
 
