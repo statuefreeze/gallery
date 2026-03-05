@@ -17,7 +17,7 @@
           packages = with pkgs; [
             git
             nodejs_22
-            pnpm
+            pnpm_10
             supabase-cli
           ];
 
