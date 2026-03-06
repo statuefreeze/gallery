@@ -6,4 +6,3 @@
 dist
 flake.lock
 node_modules
-pnpm-lock.yaml
