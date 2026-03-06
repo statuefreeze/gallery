@@ -1,3 +1,4 @@
+import path from "node:path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import UnoCSS from "unocss/vite";
@@ -6,4 +7,12 @@ import UnoCSS from "unocss/vite";
 export default defineConfig({
   plugins: [UnoCSS(), react()],
   base: process.env.VITE_BASE_PATH || "/",
+  build: {
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, "index.html"),
+        "404": path.resolve(__dirname, "404.html"),
+      },
+    },
+  },
 });
