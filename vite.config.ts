@@ -7,6 +7,9 @@ import UnoCSS from "unocss/vite";
 export default defineConfig({
   plugins: [UnoCSS(), react()],
   base: process.env.VITE_BASE_PATH || "/",
+  resolve: {
+    alias: { "@": path.resolve(__dirname, "src") },
+  },
   build: {
     rollupOptions: {
       input: {

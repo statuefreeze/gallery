@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import type { Session } from "@supabase/supabase-js";
-import { supabase } from "./utils/supabase";
+import { supabase } from "@/utils/supabase";
 
 function Home(props: { session: Session | null }) {
   const { session } = props;
